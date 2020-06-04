@@ -1,4 +1,4 @@
-FROM gadm01/ebs_gobii_ubuntu:latest
+FROM gadm01/ebs_gobii_ubuntu:bionic
 RUN apt-get -y update && apt-get install -y gnupg2
 COPY config.sh /root
 RUN chmod 755 /root/config.sh
