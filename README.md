@@ -1,7 +1,7 @@
 # README #
 
-![Alt text](https://thumbnails-photos.amazon.com/v1/thumbnail/BoKZcnoqRbu1FA5S-pq0FQ?viewBox=860%2C430&ownerId=A3RL6H4CGV9EDF&groupShareToken=3nBmqRPHRkOSNoFCzXXJxA.g3lrRb25_s0FjHtiFfscnu "GOBii Project")
-TODO: Add EBS Logo
+![Alt text](https://thumbnails-photos.amazon.com/v1/thumbnail/Of9ZDsQVQJmwU8yVUOqOBA?viewBox=1274%2C446&ownerId=A3RL6H4CGV9EDF&groupShareToken=hUvDrVn8RPWn5_u_YGm-bQ.sVGw65F_iwiLRhphi27iN5 "EBS") ![Alt text](https://thumbnails-photos.amazon.com/v1/thumbnail/BoKZcnoqRbu1FA5S-pq0FQ?viewBox=860%2C430&ownerId=A3RL6H4CGV9EDF&groupShareToken=3nBmqRPHRkOSNoFCzXXJxA.g3lrRb25_s0FjHtiFfscnu "GOBii Project")
+
 
 # EBS-GOBii Base Docker Containers
 
