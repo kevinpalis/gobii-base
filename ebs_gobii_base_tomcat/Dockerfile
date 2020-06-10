@@ -17,7 +17,7 @@ RUN tar --no-same-owner --no-acls -xzf apache-tomcat-9.0.27.tar.gz
 RUN cp -r apache-tomcat-9.0.27 /usr/local/tomcat_tmp
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\numask 002/' /usr/local/tomcat_tmp/bin/startup.sh
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\nJRE_HOME\=\/usr\/lib\/jvm\/zulu-13-amd64/' /usr/local/tomcat_tmp/bin/catalina.sh
-#Sticking to simpler configuration, leaving this here for reference
+#Sticking to simpler configuration, leaving this here for reference - might remove later
 #RUN sed -i 's/<Context>/<Context>\n<ResourceLink name="gobiipropsloc" global="gobiipropsloc" type="java.lang.String"\/>/' /usr/local/tomcat_tmp/conf/context.xml
 
 COPY config.sh /root
