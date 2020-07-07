@@ -1,4 +1,4 @@
-FROM gadm01/gobii_ubuntu:latest
+FROM gadm01/ebs_gobii_ubuntu:latest
 
 RUN apt-get update -y && apt-get install -y gnupg2
 RUN apt-get install -y software-properties-common
