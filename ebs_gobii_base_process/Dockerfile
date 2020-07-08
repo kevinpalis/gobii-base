@@ -9,7 +9,6 @@ RUN apt-get -y install python2.7-dev
 RUN apt-get -y install python-psycopg2
 RUN apt-get -y install curl
 RUN apt-get install -y python-pip
-RUN apt install -y vim
 RUN pip install --upgrade pip
 RUN pip install Numpy
 RUN pip install pandas
