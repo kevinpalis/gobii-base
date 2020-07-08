@@ -1,4 +1,4 @@
-FROM gadm01/gobii_ubuntu:latest
+FROM gadm01/ebs_gobii_ubuntu:latest
 
 RUN apt-get update -y && apt-get install -y gnupg2
 RUN apt-get install -y software-properties-common
@@ -9,8 +9,6 @@ RUN apt-get update -y
 RUN apt-get install -y zulu-13
 #Install maven
 RUN apt-get -y install maven
-#Install vim
-RUN apt-get install -y vim
 #Install and configure Tomcat 9
 RUN wget https://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat-9.0.36.tar.gz
 RUN tar --no-same-owner --no-acls -xzf apache-tomcat-9.0.36.tar.gz
