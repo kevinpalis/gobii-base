@@ -1,4 +1,4 @@
-FROM gadm01/ebs_gobii_ubuntu:latest
+FROM gadm01/ebs_gobii_ubuntu:bionic
 RUN apt-get update -y && apt-get install -y gnupg2
 RUN apt-get install software-properties-common build-essential zlib1g-dev -y libbz2-dev liblzma-dev
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
