@@ -15,23 +15,5 @@ RUN pip install pandas
 COPY config.sh /root
 RUN chmod 755 /root/config.sh
 USER gadm
-RUN curl -L http://xrl.us/installperlnix | bash
-RUN /home/gadm/perl5/perlbrew/bin/cpanm Text::CSV
-RUN /home/gadm/perl5/perlbrew/bin/cpanm Canary::Stability
-RUN /home/gadm/perl5/perlbrew/bin/cpanm JSON::XS
-RUN /home/gadm/perl5/perlbrew/bin/cpanm Switch
-RUN cd /home/gadm; wget https://github.com/samtools/htslib/releases/download/1.4/htslib-1.4.tar.bz2
-RUN cd /home/gadm; wget https://github.com/samtools/bcftools/releases/download/1.4/bcftools-1.4.tar.bz2
-RUN cd /home/gadm; tar -xjf htslib-1.4.tar.bz2
-RUN cd /home/gadm; tar -xjf bcftools-1.4.tar.bz2
-RUN cd /home/gadm; mv htslib-1.4 htslib
-RUN cd /home/gadm; mv bcftools-1.4 bcftools
-RUN cd /home/gadm/bcftools; make
-RUN cd /home/gadm; wget https://s3.us-east-2.amazonaws.com/gobii-archives/vcftools_0.1.13.tar.gz
-RUN cd /home/gadm; tar -xzf vcftools_0.1.13.tar.gz
-RUN cd /home/gadm/vcftools_0.1.13; make
-RUN echo export PERL5LIB=/home/gadm/vcftools_0.1.13/perl >> /home/gadm/.bashrc
-RUN echo export PATH=$PATH:/home/gadm/vcftools_0.1.13/bin/ >> /home/gadm/.bashrc
-RUN ["/bin/bash", "-c", "source /home/gadm/.bashrc"]
 USER root
 ENTRYPOINT ["/root/config.sh"]
