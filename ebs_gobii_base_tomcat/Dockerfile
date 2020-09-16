@@ -1,4 +1,4 @@
-FROM gadm01/ebs_gobii_ubuntu:latest
+FROM gadm01/ebs_gobii_ubuntu:bionic
 
 RUN apt-get update -y && apt-get install -y gnupg2
 RUN apt-get install -y software-properties-common
@@ -10,8 +10,8 @@ RUN apt-get install -y zulu-13
 #Install maven
 RUN apt-get -y install maven
 #Install and configure Tomcat 9
-RUN wget https://mirrors.ocf.berkeley.edu/apache/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat-9.0.36.tar.gz
-RUN tar --no-same-owner --no-acls -xzf apache-tomcat-9.0.36.tar.gz
+RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz
+RUN tar --no-same-owner --no-acls -xzf apache-tomcat-9.0.38.tar.gz
 RUN cp -r apache-tomcat-9.0.36 /usr/local/tomcat_tmp
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\numask 002/' /usr/local/tomcat_tmp/bin/startup.sh
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\nJRE_HOME\=\/usr\/lib\/jvm\/zulu-13-amd64/' /usr/local/tomcat_tmp/bin/catalina.sh
