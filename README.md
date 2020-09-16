@@ -23,8 +23,9 @@ These base containers are taken by Bamboo CI/CD pipeline to run builds and integ
 	This repository triggers multiple Docker Hub repository builds. The following branches directly affect builds on one or more Docker Hub repo:
 	* **master** - triggers ebs_gobii_ubuntu, ebs_gobii_base_db, ebs_gobii_base_process, and ebs_gobii_base_tomcat with tag:latest
 	* **bionic** - triggers ebs_gobii_ubuntu with tag:bionic
-	* **tomcat([0-9.]+** - triggers ebs_gobii_base_tomcat with tag:tomcat-([0-9.]+ - Note that the latter part is a regex expression that should resolve to the version of Tomcat the container used as base
-	* **postgres([0-9.]+** - triggers ebs_gobii_base_db with tag:postgres-([0-9.]+ - Note that the latter part is a regex expression that should resolve to the version of PostgreSQL the container used as base
+	* **tomcat([0-9.]+)** - triggers ebs_gobii_base_tomcat with tag:tomcat-([0-9.]+) - Note that the latter part is a regex expression that should resolve to the version of Tomcat the container used as base
+	* **postgres([0-9.]+)+** - triggers ebs_gobii_base_db with tag:postgres-([0-9.]+) - Note that the latter part is a regex expression that should resolve to the version of PostgreSQL the container used as base
+	* **java([0-9.]+)** - triggers ebs_gobii_base_process with tag:java-([0-9.]+) - Note that the latter part is a regex expression that should resolve to the version of Java the container used as base
 * **Code review:**   
 	Once all the version 1 tags are in place, ie. the Dockerfiles are functional and stable, no direct merge to the master branch will be allowed. All changes should follow the gitflow workflow (modified to include the branches described above) and a corresponding PR should be created for every merge request.
 * **Other guidelines:** 
