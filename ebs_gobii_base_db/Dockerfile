@@ -1,7 +1,7 @@
 FROM gadm01/ebs_gobii_ubuntu:bionic
 
 RUN apt-get -y update && apt-get install -y gnupg2
-RUN apt-get install software-properties-common
+RUN apt-get -y install software-properties-common
 #install Java
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
 RUN apt-add-repository 'deb http://repos.azulsystems.com/ubuntu stable main'
