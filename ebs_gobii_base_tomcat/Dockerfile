@@ -12,7 +12,7 @@ RUN apt-get -y install maven
 #Install and configure Tomcat 9
 RUN wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz
 RUN tar --no-same-owner --no-acls -xzf apache-tomcat-9.0.38.tar.gz
-RUN cp -r apache-tomcat-9.0.36 /usr/local/tomcat_tmp
+RUN cp -r apache-tomcat-9.0.38 /usr/local/tomcat_tmp
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\numask 002/' /usr/local/tomcat_tmp/bin/startup.sh
 RUN sed -i 's/#!\/bin\/sh/#!\/bin\/sh\nJRE_HOME\=\/usr\/lib\/jvm\/zulu-13-amd64/' /usr/local/tomcat_tmp/bin/catalina.sh
 #Sticking to simpler configuration, leaving this here for reference - might remove later
